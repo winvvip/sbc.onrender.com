@@ -13,6 +13,14 @@ AddDefaultCharset utf-8
 AddHandler application/x-httpd-php71 .php .php5 .php4 .php3
 AddType application/x-httpd-php .html .htm
 
+# Force HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect Single
+Redirect 301 "/judi-bola-online" "/manfaat-judi-bola-online"
+
 # Cache
 <FilesMatch "\.(flv|gif|jpg|jpeg|png|ico|js|css|pdf|swf|html|htm|txt)$">
 Header set Cache-Control "max-age=123678, public"
