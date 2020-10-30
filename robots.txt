@@ -1,5 +1,7 @@
 User-agent: *
-Disallow: 
-
+Allow: /
+Disallow: /lib/
+Disallow: /colong/
+Disallow: /content/
 
 Sitemap: https://slotbolacasino.onrender.com/sitemap.xml
